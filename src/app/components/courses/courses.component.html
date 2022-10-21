@@ -1,0 +1,28 @@
+<p>courses works!</p>
+<div class="container">
+
+  <div class="all-courses">
+    <div *ngFor="let course of courses; trackBy:courseTrackBy" class="course">
+      <h4 (click)="onCourseClick(course.id)" class="card-title">Course Title: {{course.title}}</h4>
+      <p> {{course.description}}</p>
+      <p> Completed: {{course.percentComplete}}%</p>
+      <button (click)="OnDeleteClick(course.id)" class="btn btn-red">Delete</button><br>
+    </div>
+  </div>
+
+  <div class="selected-course">
+    <form action="submit">
+      <label for="title">Title</label><br>
+      <input type="text" name="title" id="title" [(ngModel)]="selectedCourse.title"> <br> <br>
+
+      <label for="desc">Description</label><br>
+      <textarea type="text" name="description" id="desc" [(ngModel)]="selectedCourse.description"></textarea><br>
+      <div class="d-flex form-btns">
+        <button (click)="OnCreateClick(selectedCourse)" class="btn btn-blue">Create </button><br>
+        <button (click)="OnUpdatdeClick(selectedCourse)" class="btn btn-blue">Update</button><br>
+      </div>
+
+
+    </form>
+  </div>
+</div>

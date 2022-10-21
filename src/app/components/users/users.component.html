@@ -1,0 +1,66 @@
+<!-- <p>users works!</p> -->
+<div class="container">
+
+  <div class="search-new-user">
+    <div class="search">
+      <button class="btn btn-blue">Search</button>
+      <input type="text" name="search" id="search">
+    </div>
+    <div class="new-user">
+      <button (click)="onAddClicked()" class="btn btn-green">Add New User</button>
+    </div>
+  </div>
+
+  <table class="users-info">
+    <thead>
+      <tr class="headers">
+        <th rowspan="2">ID</th>
+        <th rowspan="2">Name</th>
+        <th rowspan="2">Email</th>
+        <th colspan="2">Address</th>
+        <th rowspan="2">Website</th>
+        <th rowspan="2">Compnay</th>
+        <th colspan="2">Action</th>
+      </tr>
+      <tr>
+        <th>City</th>
+        <th>Zipcode</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.address.city}}</td>
+        <td>{{user.address.zipcode}}</td>
+        <td>{{user.website}}</td>
+        <td>{{user.company.name}}</td>
+
+        <td><button (click)="onEditClicked(user)" class="btn btn-blue">Edit</button></td>
+        <td><button (click)="onDeleteClicked(user.id)" class="btn btn-red">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="add-update-user" *ngIf="showAddUpdateUser">
+    <div class="add-update-container">
+      <app-add-update-user [selecetdUserID]="userID" class="add-update-comp"></app-add-update-user>
+    </div>
+  </div>
+
+  <div class="confirm-delete-user" *ngIf="confirmDeleteUser">
+    <div class="confirm-delete-user-container">
+      <div class="confirm-content">
+        <div class="confirm-message">Are you sure you want to delete this user?</div>
+        <div class="btn form-buttons">
+          <input (click)="onSubmitClicked(toDeleteUserID)" type="submit" value="Confirm" class="btn btn-green">
+          <input (click)="onCancelClicked()" type="button" value="Cancel" class="btn btn-red ">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

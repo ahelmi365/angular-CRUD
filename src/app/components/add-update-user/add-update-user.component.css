@@ -1,0 +1,50 @@
+.add-update-comp{
+
+  padding: 1rem;
+  background-color: white;
+  width: 550px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border: 1px solid darkgray;
+  border-radius: 10px;
+  margin: 2rem;
+  background-color: white;
+}
+
+form.add-update-user{
+  width: 100%;
+}
+.form-field{
+  display: flex;
+  gap: 10%;
+  margin: 1rem;
+}
+
+
+.form-field label{
+ flex-basis: 20%;
+ min-width: 50px;
+ font-size: 1rem;
+ font-weight: bold;
+
+}
+
+
+
+.form-field input{
+  padding: 5px;
+  flex-basis: 70%;
+}
+
+.form-buttons{
+  display: flex;
+  justify-content:center;
+  gap: 5%;
+}
+

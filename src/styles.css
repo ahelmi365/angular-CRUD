@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+.d-flex {
+  display: flex;
+}
+
+
+.btn {
+  padding: .375rem .75rem;
+  line-height: 1.5;
+  border: 1px solid white;
+  border-radius: .25rem;
+  color: white;
+  cursor: pointer;
+  min-width: 80px;
+  font-weight:400;
+}
+
+.btn-blue {
+  background-color: #007bff;
+
+}
+.btn-blue:hover {
+  background-color:#0069d9;
+
+}
+
+.btn-red {
+  background-color: #dc3545;
+}
+
+.btn-red:hover{
+  background-color:#c82333;
+}
+
+
+.btn-green {
+  background-color: #28a745;
+}
+
+.btn-green:hover{
+  background-color: #218838;
+}
+

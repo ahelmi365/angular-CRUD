@@ -1,0 +1,41 @@
+<!-- <p>add-update-user works!</p> -->
+<div class="add-update-comp">
+  <div class="container">
+    <form action="submit" class="add-update-user" method="post" name="add-update-user" [formGroup]="addUpdateUserForm">
+      <div class="form-field">
+        <label for="user-name">Name</label>
+        <input type="text" name="user-name" id="user-name" required formControlName="userName">
+      </div>
+      <div class="form-field">
+        <label for="user-email">Email</label>
+        <input  type="email" name="user-email" id="user-email" required formControlName="userEmail" >
+      </div>
+      <div class="form-field">
+        <label for="user-city">City</label>
+        <input type="text" name="user-city" id="user-city" required formControlName="userCity">
+      </div>
+      <div class="form-field">
+        <label for="user-zipcode">Zipcode</label>
+        <input type="text" name="user-zipcode" id="user-zipcode"
+          pattern="[0-9]*" required formControlName="userZipcode" >
+      </div>
+      <div class="form-field">
+        <label for="user-web-site">Website</label>
+        <input  type="url" name="user-web-site" id="user-web-site" required formControlName="userWebsite" >
+      </div>
+
+      <div class="form-field">
+        <label for="user-compnay">Compnay</label>
+        <input  type="text" name="user-compnay" id="user-compnay" required formControlName="userCompany">
+      </div>
+
+      <div class="btn form-buttons">
+        <input (click)="onSubmitClicked(selectedUser)"  type="submit" value="Submit" class="btn btn-green">
+        <input type="reset" value="Reset" class="btn btn-blue">
+        <input (click)="onCancelClicked()" type="reset" value="Cancel" class="btn btn-red ">
+      </div>
+
+    </form>
+
+  </div>
+</div>
